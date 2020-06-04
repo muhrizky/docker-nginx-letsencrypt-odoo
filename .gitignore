@@ -1,2 +1,5 @@
 node_modules/
 certs/
+postgresql
+addons
+.idea
