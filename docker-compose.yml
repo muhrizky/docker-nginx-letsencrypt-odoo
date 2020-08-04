@@ -56,11 +56,11 @@ services:
 #      - LETSENCRYPT_HOST=samplewebsite.example.com
 #      - LETSENCRYPT_EMAIL=test@example.com
   db:
-    image: postgres:10.5
+    image: ${POSTGRES_VERSION}
     environment:
-      - POSTGRES_PASSWORD=odoo
-      - POSTGRES_USER=odoo
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
     restart: always
     volumes:
       - ./postgresql:/var/lib/postgresql/data
