@@ -3,4 +3,3 @@ certs/
 postgresql
 addons
 .idea
-.env
